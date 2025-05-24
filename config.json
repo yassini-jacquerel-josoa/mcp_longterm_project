@@ -1,0 +1,13 @@
+{
+    "mcpServers": {
+      "weather": {
+        "command": "uv",
+        "args": ["run", "python", "src/mcp_server/weather/weather_server.py"]
+      },
+      "todo": {
+        "command": "uv",
+        "args": ["run", "python", "src/mcp_server/todo/todo_server.py"]
+      }
+    }
+  }
+  
