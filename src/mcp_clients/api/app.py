@@ -4,15 +4,14 @@ from pydantic import BaseModel
 from pydantic_settings import BaseSettings
 from typing import Dict, Any
 from contextlib import asynccontextmanager
-from client import MCPUSE_CLIENT
-from dotenv import load_dotenv, find_dotenv
+from src.mcp_clients.core.client import MCPUSE_CLIENT
 import json
 
 import mcp_use
 
 mcp_use.set_debug(1)
 
-with open("config.json") as f:
+with open("server_config.json") as f:
     config = json.load(f)
     print(f"Config: {config}")
 
@@ -57,7 +56,4 @@ async def process_query(request: QueryRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app=app, host="localhost", port=2000, log_level="info")
+ 
