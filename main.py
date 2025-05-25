@@ -13,7 +13,7 @@ def terminal():
 @cli.command()
 def api():
     import uvicorn
-    uvicorn.run("src.mcp_clients.api.app:app", host="0.0.0.0", port=2000)
+    uvicorn.run("src.mcp_clients.api.app:app", host="localhost", port=2000)
 
 if __name__ == "__main__":
     api()

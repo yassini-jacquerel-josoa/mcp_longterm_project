@@ -24,7 +24,7 @@ class MCPUSE_CLIENT:
         self.agent = MCPAgent(
             llm=self.llm,
             client=self.client,
-            max_steps=30,
+            max_steps=10,
             use_server_manager=True,
             verbose=True,
         )

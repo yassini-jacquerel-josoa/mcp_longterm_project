@@ -3,13 +3,13 @@ from fastmcp import Client
 
 async def main():
     # Connexion au serveur weather via stdio
-    async with Client("src/mcp_server/notes/notes_server.py") as client:
+    async with Client("src/mcp_servers/notes/notes_server.py") as client:
         tools = await client.list_tools()
         print("Outils disponibles :", tools)
 
         # # Exemple d'appel de get_alerts
-        resp_create_todo = await client.call_tool("add_note", {"item": "test"})
-        print("\n\n\nAlerts NY:\n", resp_create_todo) 
+        # resp_create_todo = await client.call_tool("add_note", {"item": "test"})
+        # print("\n\n\nAlerts NY:\n", resp_create_todo) 
 
         # # Exemple d'appel de get_forecast
         # resp_forecast = await client.call_tool(
