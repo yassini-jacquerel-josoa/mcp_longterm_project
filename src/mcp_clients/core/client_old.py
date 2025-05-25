@@ -2,7 +2,7 @@ import asyncio
 from fastmcp import Client
 
 async def main():
-    # Connexion au serveur weather via stdio
+    # Connexion au serveur via stdio
     async with Client("src/mcp_servers/notes/notes_server.py") as client:
         tools = await client.list_tools()
         print("Outils disponibles :", tools)

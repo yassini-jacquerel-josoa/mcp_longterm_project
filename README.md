@@ -69,8 +69,7 @@ OPENAI_API_KEY=votre_clé_api_openai
 ### Démarrer les serveurs MCP
 Les serveurs peuvent être démarrés via la configuration dans `config.json` :
 
-```bash
-uv run python src/mcp_server/weather/weather_server.py
+```bash 
 uv run python src/mcp_server/todo/todo_server.py
 ```
 
